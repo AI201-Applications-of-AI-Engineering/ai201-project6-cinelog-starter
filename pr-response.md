@@ -10,7 +10,8 @@ Renamed all "save_to_watchlist" to "add_to_watchlist" to fit the naming conventi
 
 ## Comment 2 — Deduplication
 **What I did:**
-**How I verified:**
+Created a WatchlistEntry query, finding to see if the film_id and user_id already exists. If it does, then we raise an error. If not, then the program adds the entry into the database.
+**How I verified:** I verified by comparing it to the "add_to_collection" function in collection.service.py. Seeing that both functions operate similarily, I made sure to check whether WatchlistEntry contained it, and return the adequate response based on it.
 
 ## Comment 3 — Missing test
 **What I did:**
