@@ -18,9 +18,9 @@ Created a WatchlistEntry query, finding to see if the film_id and user_id alread
 **How I verified:** I verified this by running "pytest \test\test_watchlist.py," which successfully passed.
 
 ## Comment 4 — Default visibility
-**My position:**
-**Reasoning:**
-**Tradeoff acknowledged:**
+**My position:** The default should be set to public rather than private.
+**Reasoning:** If we were to set the default to private for everyone, there would be very little social activities by default. Many users may think that the app is dead/dying, and quit before using it. This would kill the product in the long run, whereas having the default set to public allows new/continuing users to see that the app is still alive.
+**Tradeoff acknowledged:** If "public=True", then theoretically, everyone's watchlist is public. However, if some people wanted their watchlist to be private, and didn't know it was private by default, it may cause privacy issues.
 
 ## Comment 5 — Sort order
 **My position:**
