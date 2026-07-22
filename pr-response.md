@@ -23,9 +23,9 @@ Created a WatchlistEntry query, finding to see if the film_id and user_id alread
 **Tradeoff acknowledged:** If "public=True", then theoretically, everyone's watchlist is public. However, if some people wanted their watchlist to be private, and didn't know it was private by default, it may cause privacy issues.
 
 ## Comment 5 — Sort order
-**My position:**
-**Reasoning:**
-**Engagement with reviewer's point:**
+**My position:** default to "date added" rather than alphabetical
+**Reasoning:** Many users want to see that their watchlist has updated. If we kept it alphabetical and we always add something at the end of the alphabet, the user has to manually scroll every time to the bottom to see whether the film was added or not. 
+**Engagement with reviewer's point:** Any stress caused to the user because of program functionality could cause them to quit using the program rather than retaining them. Keeping it defaulted to "date added" allows the user to know that the top are the most recently added, and if they want to watch in order of they were added, they can go to the very bottom or reverse the list. Furthermore, the only purpose in having alphabetical besides aesthetic reasons is for searchability.
 
 ## Comment 6 — Rebase
 **What conflicted:**
