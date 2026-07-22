@@ -28,9 +28,9 @@ Created a WatchlistEntry query, finding to see if the film_id and user_id alread
 **Engagement with reviewer's point:** Any stress caused to the user because of program functionality could cause them to quit using the program rather than retaining them. Keeping it defaulted to "date added" allows the user to know that the top are the most recently added, and if they want to watch in order of they were added, they can go to the very bottom or reverse the list. Furthermore, the only purpose in having alphabetical besides aesthetic reasons is for searchability.
 
 ## Comment 6 — Rebase
-**What conflicted:**
-**How I resolved it:**
-**How I verified no conflict remains:**
+**What conflicted:** Had a conflicting .gitignore conflict, alongside UUID issues, causing my "git rebase origin/main" to completely remove my WatchlistEntry in models.py
+**How I resolved it:** I had Claude help me fix the rebasing issues. Since no merge conflicts arose, it was just models.py. I had Claude restore models.py to what it was before the rebase and updated the docstrings/comments. 
+**How I verified no conflict remains:** I saw that the rebase successfully passed in the terminal. Furthermore, after I reverted models.py back to what it was before, I reran the watchlist.py test, and it worked again.
 
 ## PR Description
 <!-- Written at the end — feature overview, design decisions, manual testing steps -->
