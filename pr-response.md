@@ -1,7 +1,11 @@
 # PR Response Doc — CineLog Watchlist Feature
 
+Screenshot of "git log --oneline"
+<img width="1014" height="250" alt="image" src="https://github.com/user-attachments/assets/d3202b8c-af31-4177-b0d0-95f2fb8478d8" />
+
 ## AI Usage
 <!-- Fill in at the end — how you used AI tools during this project -->
+Throughout the project, I utilized Claude to help me understand the program. I asked it to summarize what models.py was responsible for, what it depended on, check deduplication and if my changes were accurate to other parts of the project. In order to understand my flaws more, I asked Claude to also explain any counterarguments that could be made to my choices in Comments 4 and 5. It explained to me my flaws (storage reasoning was wrong, watchlist isn't an activity feed), and helped me clarify my real arguments (privacy and activity ordering). As I struggled on rebasing, I asked it to help me resolve the issue by telling me what happened when I rebased, and how to revert the changes back to what it was. Lastly, I asked it to verify that my commit messages followed conventional commit format, and was able to properly readjust my commit messages to properly reflect the convention.
 
 ## Comment 1 — Rename
 **What I did:** 
@@ -34,3 +38,8 @@ Created a WatchlistEntry query, finding to see if the film_id and user_id alread
 
 ## PR Description
 <!-- Written at the end — feature overview, design decisions, manual testing steps -->
+
+The watchlist feature manually adds a film to a user's watchlist, making sure that the film exists and is not already in the watchlist. In order to simplify the UI for the users, I set the default visibility for the watchlist to "public" and set the sort order to "date added" instead of alphabetical. The idea here was that setting it to public will allow users to see others' social activities, and setting sort order to "date added" simplified the searching for users wanting to see what they've added. To manually test this feature out:
+
+Open the terminal
+Run "pytest tests/test_watchlist.py"
