@@ -14,8 +14,8 @@ Created a WatchlistEntry query, finding to see if the film_id and user_id alread
 **How I verified:** I verified by comparing it to the "add_to_collection" function in collection.service.py. Seeing that both functions operate similarily, I made sure to check whether WatchlistEntry contained it, and return the adequate response based on it.
 
 ## Comment 3 — Missing test
-**What I did:**
-**How I verified:**
+**What I did:** I created a new test file, test_watchlist.py, that tests the updated add_to_watchlist after it was fixed. The pytest checks whether the film is checked or not, and then runs the test.
+**How I verified:** I verified this by running "pytest \test\test_watchlist.py," which successfully passed.
 
 ## Comment 4 — Default visibility
 **My position:**
